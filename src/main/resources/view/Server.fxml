@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.ScrollPane?>
+
+<AnchorPane prefHeight="500.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.multi_client_chatapplication.Controller.ServerController">
+    <children>
+        <!-- Header Label -->
+        <Label layoutX="20.0" layoutY="20.0" text="Server" style="-fx-font-size: 24px; -fx-font-weight: bold;" />
+
+        <!-- Message Section -->
+        <VBox layoutX="20.0" layoutY="60.0" prefWidth="560.0" spacing="10">
+            <!-- Scrollable container for displaying messages -->
+            <ScrollPane fx:id="scrollPane" prefHeight="250.0" prefWidth="560.0" style="-fx-background-color: transparent; -fx-border-color: transparent;">
+                <content>
+                    <VBox fx:id="server_messageContainer" prefWidth="560.0" spacing="10" style="-fx-border-color: gray; -fx-border-width: 1px; padding: 10px;">
+                        <!-- Messages will be dynamically added here -->
+                    </VBox>
+                </content>
+            </ScrollPane>
+
+            <!-- Input Text and Buttons -->
+            <VBox alignment="CENTER_LEFT" spacing="10">
+                <!-- Text input area for server -->
+                <TextField fx:id="server_textfield" prefWidth="400.0" promptText="Type your message..." />
+
+                <HBox spacing="10">
+                    <!-- Send Text Button -->
+                    <JFXButton fx:id="server_sendbtn" onAction="#server_sendbtn_OnAction" style="-fx-background-color: hotpink; -fx-text-fill: white;" text="Send" />
+
+                    <!-- Send Image Button -->
+                    <JFXButton fx:id="server_sendImagebtn" onAction="#server_sendImagebtn_OnAction" style="-fx-background-color: #0078D7; -fx-text-fill: white;" text="Send Image" />
+                </HBox>
+            </VBox>
+        </VBox>
+    </children>
+</AnchorPane>
+
+
+        <!--
+        <?xml version="1.0" encoding="UTF-8"?>
+
+        <?import com.jfoenix.controls.JFXButton?>
+        <?import javafx.scene.control.Label?>
+        <?import javafx.scene.control.ScrollPane?>
+        <?import javafx.scene.control.TextArea?>
+        <?import javafx.scene.layout.AnchorPane?>
+        <?import javafx.scene.layout.HBox?>
+        <?import javafx.scene.layout.VBox?>
+        <?import javafx.scene.text.Font?>
+
+        <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.lk.ijse.multi_client_chatapplication.ServerController">
+           <children>
+              <Label layoutX="234.0" layoutY="25.0" prefHeight="17.0" prefWidth="94.0" text="SERVER">
+                 <font>
+                    <Font name="System Bold" size="20.0" />
+                 </font>
+              </Label>
+              <VBox layoutX="26.0" layoutY="64.0" prefHeight="234.0" prefWidth="543.0">
+                 <children>
+                    <ScrollPane fx:id="scrolPane" prefHeight="236.0" prefWidth="543.0">
+                       <content>
+                          <VBox fx:id="serverMsgConteiner" prefHeight="0.0" prefWidth="540.0" />
+                       </content>
+                    </ScrollPane>
+                 </children>
+              </VBox>
+              <HBox layoutX="26.0" layoutY="298.0" prefHeight="30.0" prefWidth="543.0">
+                 <children>
+                    <TextArea fx:id="txtArea" prefHeight="30.0" prefWidth="447.0" promptText="  Type Your Message..." />
+                 </children>
+              </HBox>
+              <HBox layoutX="26.0" layoutY="336.0" prefHeight="39.0" prefWidth="543.0">
+                 <children>
+                    <JFXButton fx:id="serverSendMsgBtn" buttonType="RAISED" onAction="#serverSendMsgOnAction" prefHeight="39.0" prefWidth="79.0" style="-fx-background-color: red;" text="Send" textFill="#f5f2f2">
+                       <font>
+                          <Font name="System Bold" size="14.0" />
+                       </font>
+                    </JFXButton>
+                    <JFXButton fx:id="serverSendImgBtn" buttonType="RAISED" onAction="#serverSendImgOnAction" prefHeight="38.0" prefWidth="132.0" style="-fx-background-color: brown;" text="Send Image" textFill="#f5f2f2">
+                       <font>
+                          <Font name="System Bold" size="14.0" />
+                       </font>
+                    </JFXButton>
+                 </children>
+              </HBox>
+           </children>
+        </AnchorPane>
+        -->
