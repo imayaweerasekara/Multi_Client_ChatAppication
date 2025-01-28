@@ -14,27 +14,20 @@
         <!-- Header Label -->
         <Label layoutX="20.0" layoutY="20.0" text="Server" style="-fx-font-size: 24px; -fx-font-weight: bold;" />
 
-        <!-- Message Section -->
         <VBox layoutX="20.0" layoutY="60.0" prefWidth="560.0" spacing="10">
-            <!-- Scrollable container for displaying messages -->
             <ScrollPane fx:id="scrollPane" prefHeight="250.0" prefWidth="560.0" style="-fx-background-color: transparent; -fx-border-color: transparent;">
                 <content>
                     <VBox fx:id="server_messageContainer" prefWidth="560.0" spacing="10" style="-fx-border-color: gray; -fx-border-width: 1px; padding: 10px;">
-                        <!-- Messages will be dynamically added here -->
                     </VBox>
                 </content>
             </ScrollPane>
 
-            <!-- Input Text and Buttons -->
             <VBox alignment="CENTER_LEFT" spacing="10">
-                <!-- Text input area for server -->
                 <TextField fx:id="server_textfield" prefWidth="400.0" promptText="Type your message..." />
 
                 <HBox spacing="10">
-                    <!-- Send Text Button -->
                     <JFXButton fx:id="server_sendbtn" onAction="#server_sendbtn_OnAction" style="-fx-background-color: hotpink; -fx-text-fill: white;" text="Send" />
 
-                    <!-- Send Image Button -->
                     <JFXButton fx:id="server_sendImagebtn" onAction="#server_sendImagebtn_OnAction" style="-fx-background-color: #0078D7; -fx-text-fill: white;" text="Send Image" />
                 </HBox>
             </VBox>

@@ -77,12 +77,12 @@ public class ServerController {
     void server_sendbtn_OnAction(ActionEvent event) throws IOException {
         String message = server_textfield.getText();
 
-        // Send text type identifier
+
         dataOutputStream.writeUTF("text");
         dataOutputStream.writeUTF(message);
         dataOutputStream.flush();
 
-        // Display message in the server's UI
+
         TextArea textMessage = new TextArea("Server: " + message);
         textMessage.setWrapText(true);
         textMessage.setEditable(false);
@@ -100,13 +100,13 @@ public class ServerController {
         if (selectedFile != null) {
             byte[] imageBytes = Files.readAllBytes(selectedFile.toPath());
 
-            // Send image type identifier
+
             dataOutputStream.writeUTF("image");
             dataOutputStream.writeInt(imageBytes.length);
             dataOutputStream.write(imageBytes);
             dataOutputStream.flush();
 
-            // Display image in the server's UI
+
             Image image = new Image(selectedFile.toURI().toString());
             ImageView imageView = new ImageView(image);
             imageView.setFitWidth(200);

@@ -79,7 +79,7 @@ public class ClientController {
         dataOutputStream.writeUTF(message);
         dataOutputStream.flush();
 
-        // Display message in the client's UI
+
         TextArea textMessage = new TextArea("Client: " + message);
         textMessage.setWrapText(true);
         textMessage.setEditable(false);
@@ -97,13 +97,13 @@ public class ClientController {
         if (selectedFile != null) {
             byte[] imageBytes = Files.readAllBytes(selectedFile.toPath());
 
-            // Send image type identifier
+
             dataOutputStream.writeUTF("image");
             dataOutputStream.writeInt(imageBytes.length);
             dataOutputStream.write(imageBytes);
             dataOutputStream.flush();
 
-            // Display image in the client's UI
+
             Image image = new Image(selectedFile.toURI().toString());
             ImageView imageView = new ImageView(image);
             imageView.setFitWidth(200);
